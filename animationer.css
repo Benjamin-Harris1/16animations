@@ -1,0 +1,122 @@
+/* Animation 1: Falling
+   Bolden falder konstant fra oven. */
+.falling {
+  animation-name: falling;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 300%);
+  }
+}
+
+/*Animation 2: bouncing
+Bolden hopper op og ned */
+.bouncing {
+  animation-name: bouncing;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes bouncing {
+  0% {
+    transform: translate(0, -75%);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translate(0, 150%);
+  }
+  90% {
+    transform: translate(0, -60%);
+  }
+
+  100% {
+    transform: translate(0, -75%);
+  }
+}
+/*Animation 3: drop
+Bolden falder ned, og bliver liggende */
+.drop {
+  animation-name: drop;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0, 145%);
+  }
+}
+
+/*Animation 4: pattern
+Bolden bevæger sig i et fast mønster */
+.pattern {
+  animation-name: pattern;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pattern {
+  0% {
+    transform: translate(0, -145%);
+  }
+  25% {
+    transform: translate(150%, -10%);
+  }
+  50% {
+    transform: translate(0, 145%);
+  }
+  75% {
+    transform: translate(-150%, 10%);
+  }
+  100% {
+    transform: translate(0, -145%);
+  }
+}
+/*Animation 5: zoom out
+Bolden bliver lillebitte*/
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom_out {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(10%);
+  }
+}
+/*Animation 6: zoom in
+Bolden bliver kæmpestor*/
+.zoom_in {
+  animation-name: zoom_in;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom_in {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(1000%);
+  }
+}
