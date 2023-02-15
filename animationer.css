@@ -120,3 +120,219 @@ Bolden bliver kæmpestor*/
     transform: scale(1000%);
   }
 }
+/*Animation 7: Fade out
+Bolden fader langsomt væk*/
+.fade_out {
+  animation-name: fade_out;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fade_out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+/*Animation 8: Fade in
+Bolden fader langsomt ind*/
+.fade_in {
+  animation-name: fade_in;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 10 0%;
+  }
+}
+
+/*Animation 9: Rotation
+Bolden drejer rundt.*/
+.rotation {
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*Animation 10: rotation 2
+Bolden drejer rundt om et punkt uden for sig selv 
+Kunne ikke lige helt gennemskue hvordan dette skulle gøres, men gjorde et forsøg*/
+
+.rotation2 {
+  animation-name: rotation2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotation2 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 100% 100%;
+  }
+}
+/*Animation 11: glow
+Bolden lyser op 
+Kunne absolut heller ikke finde ud af hvordan denne skulle løses, men gav det et skud*/
+.glow {
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes glow {
+  0% {
+    filter: contrast(0%);
+  }
+  100% {
+    filter: contrast(200%);
+  }
+}
+
+/*Animation 12: blur to gray*/
+.blur_to_gray {
+  animation-name: blur_to_gray;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes blur_to_gray {
+  0% {
+    transform: translate(-150%, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(150%, 0) rotate(180deg);
+    filter: blur(4px) grayscale(100%);
+  }
+  100% {
+    transform: translate(-150%, 0) rotate(0deg);
+  }
+}
+/*Animation 13: pulse*/
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/*Animation 14: overshoot*/
+.overshoot {
+  animation-name: overshoot;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overshoot {
+  0% {
+    transform: translate(-100%, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(250%, 0) rotate(180deg);
+  }
+  100% {
+    transform: translate(150%, 0) rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+}
+/*Animation 15: bounce*/
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(-150%, -20%) rotate(0deg);
+  }
+  20% {
+    transform: translate(-50%, 145%) rotate(72deg);
+  }
+  40% {
+    transform: translate(0%, 0%) rotate(144deg);
+  }
+  60% {
+    transform: translate(50%, 145%) rotate(216deg);
+  }
+  80% {
+    transform: translate(100%, 50%) rotate(288deg);
+  }
+  100% {
+    transform: translate(150%, 145%) rotate(360deg);
+  }
+}
+/*Animation 16: squash
+min løsning ser lidt clumsy ud, især med højere duration*/
+.squash {
+  animation-name: squash;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes squash {
+  0% {
+    transform: translate(0, -145%) scale(0.9);
+  }
+  10% {
+    transform: translate(0, -145%) scale(1);
+  }
+  20% {
+    transform: translate(150%, -10%) scale(0.9);
+  }
+  30% {
+    transform: translate(150%, -10%) scale(1);
+  }
+  40% {
+    transform: translate(0, 145%) scale(0.9);
+  }
+  50% {
+    transform: translate(0, 145%) scale(1);
+  }
+  60% {
+    transform: translate(-150%, 10%) scale(0.9);
+  }
+  70% {
+    transform: translate(-150%, 10%) scale(1);
+  }
+  90% {
+    transform: translate(0, -145%) scale(0.9);
+  }
+  100% {
+    transform: translate(0, -145%) scale(1);
+  }
+}
